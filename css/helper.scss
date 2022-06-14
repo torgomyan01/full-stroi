@@ -1,0 +1,140 @@
+$mobile: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$fontSizes: (6);
+$fontMedia: ("xxl": $xxl, "xl": $xl, "lg": $lg, "md": $md, "sm": $sm);
+$margins: ("m": "margin", "mt": "margin-top", "mr": "margin-right", "mb": "margin-bottom", "ml": "margin-left");
+$paddings: ("p": "padding", "pt": "padding-top", "pr": "padding-right", "pb": "padding-bottom", "pl": "padding-left");
+
+$ii: 6;
+@for $i from 5 through 65 {
+  $ii: $ii + 2;
+  $fontSizes: append($fontSizes, $ii);
+}
+
+
+@each $size in $fontSizes {
+  .fs#{$size} {
+    font-size: #{$size / 16}rem;
+  }
+}
+
+@each $sizeName, $size in $fontMedia {
+  @media (min-width: $size) {
+    @each $size in $fontSizes {
+      .fs#{$size}-#{$sizeName} {
+        font-size: #{$size / 16}rem;
+      }
+    }
+  }
+}
+
+
+$rounded: (2,3,5,10,15,20,25,30,35,40,45,50);
+@each $size in $fontSizes {
+  .border-radius-#{$size} {
+    border-radius: #{$size / 16}rem !important;
+  }
+}
+
+@each $size in $fontSizes {
+  .w-#{$size} {
+    width: #{$size / 16}rem;
+  }
+}
+
+@each $size in $fontSizes {
+  .h-#{$size} {
+    height: #{$size / 16}rem;
+  }
+}
+
+
+// ----------------- MARGINS AND PADDINGS --------------------
+@each $size in $fontSizes {
+  @each $margin, $name in $margins {
+    .#{$margin}-#{$size}{
+      #{$name}: #{$size / 16}rem;
+    }
+  }
+  @each $padding, $name in $paddings {
+    .#{$padding}-#{$size}{
+      #{$name}: #{$size / 16}rem;
+    }
+  }
+}
+
+@each $size in $fontSizes {
+  @each $media, $mediaSize in $fontMedia {
+    @media (min-width: $mediaSize){
+      @each $padding, $name in $paddings {
+        .#{$padding}-#{$media}-#{$size}{
+          #{$name}: #{$size / 16}rem;
+        }
+      }
+    }
+  }
+  @each $media, $mediaSize in $fontMedia {
+    @media (min-width: $mediaSize){
+      @each $margin, $name in $margins {
+        .#{$margin}-#{$media}-#{$size}{
+          #{$name}: #{$size / 16}rem;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin bg() {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+// ----------------- MARGINS AND PADDINGS --------------------
+
+.text-transform-uppercase{
+  text-transform: uppercase;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.mt-120{
+  margin-top: 7.5rem;
+}
+
+.pt-200{
+  padding-top: 12.5rem;
+}
+
+.h-500{
+  height: 31.25rem;
+}
+.h-450{
+  height: 28.125rem;
+}
+.w-125{
+  width: 7.8125rem;
+}
+.h-125{
+  height: 7.8125rem;
+}
+.min-h-55{
+  min-height: 3.4375rem;
+}
+
+
+.w-85{
+  width: 85%;
+}
+
+.bg-image{
+  @include bg;
+}
