@@ -4,7 +4,28 @@ const {active, none, fix} = {
     fix: 'fix'
 }
 
+const mobileMenu = $('.mobile-menu-board');
+const _menu = $('.mobile-menu');
 
+mobileMenu.on('click', function (){
+    if(_menu.hasClass(active)){
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
+})
+
+function openMobileMenu(){
+    mobileMenu.addClass(active);
+    _menu.addClass(active);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu(){
+    mobileMenu.removeClass(active);
+    _menu.removeClass(active);
+    document.body.style.overflow = null;
+}
 
 
 
