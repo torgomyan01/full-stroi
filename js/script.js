@@ -107,27 +107,28 @@ function startConvertImage(){
 }
 
 
-const siteForms = $('form.site-form');
-const thanksModal = new bootstrap.Modal(document.getElementById('thanksModal'), {
-    keyboard: false
-})
+// const siteForms = $('form.site-form');
+// const thanksModal = new bootstrap.Modal(document.getElementById('thanksModal'), {
+//     keyboard: false
+// })
 
 
-siteForms.on('submit', function (e){
-    e.preventDefault();
-    const thisForm = $(this);
 
-
-    $.ajax({
-        type: "POST",
-        url: '../form.php',
-        data: thisForm.serialize(),
-        dataType: "html",
-        success: function(response){
-            if(response === '1'){
-                thanksModal.show()
-            }
-        }
-    });
-})
+// siteForms.on('submit', function (e){
+//     e.preventDefault();
+//     const thisForm = $(this);
+//
+//
+//     $.ajax({
+//         type: "POST",
+//         url: '../form.php',
+//         data: thisForm.serialize(),
+//         dataType: "html",
+//         success: function(response){
+//             if(response === '1'){
+//                 thanksModal.show()
+//             }
+//         }
+//     });
+// })
 

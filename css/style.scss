@@ -218,6 +218,21 @@ a{
 
 
 
+.def-textarea{
+  width: 100%;
+  height: auto;
+  textarea{
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    resize: none;
+    padding: 0.625rem;
+    color: #fff;
+    &::placeholder{
+      color: #fff3cd;
+    }
+  }
+}
 
 .def-input{
   width: 100%;
@@ -333,7 +348,7 @@ a{
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   @include flex('sb', 'c');
   padding: 0 2rem;
-  z-index: 1;
+  z-index: 11;
   @media (max-width: 1300px){
     max-width: calc(100% - 0.9375rem);
   }
@@ -366,6 +381,7 @@ a{
   backdrop-filter: blur(20px);
   transition: 0.3s;
   left: -100%;
+  z-index: 10;
   &.active{
     left: 0;
   }
@@ -436,4 +452,34 @@ a{
   width: 100%;
   height: 18.375rem;
   background: #2F2F2F;
+}
+
+
+.send-orders{
+  width: 100%;
+  height: 43.75rem;
+  background: url("../images/send-orders.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  .yellow-solid{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(228, 163, 12, 0.75);
+    backdrop-filter: blur(10px);
+    .map-block{
+      height: calc(100% + 1px);
+      position: absolute;
+      right: 0;
+      top: -1px;
+      width: 65%;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 30% 0);
+      @media (max-width: $md){
+        display: none;
+      }
+    }
+  }
 }
