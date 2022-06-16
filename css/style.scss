@@ -483,3 +483,25 @@ a{
     }
   }
 }
+
+.opening-menu{
+  transition: 0.3s;
+  i{
+    transform: rotate(0);
+  }
+  &.active{
+    backdrop-filter: brightness(0.5);
+    i{
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.submenu{
+  max-height: 0;
+  transition: 0.3s;
+  overflow: hidden;
+  &.active{
+    max-height: 18.75rem;
+  }
+}

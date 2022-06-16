@@ -85,27 +85,21 @@ defaultInput.next('.password').on('click', function (){
     }
 })
 
-// -------------- FOR DEFAULT INPUT FUNCTION -------------------
-allStyleImagesArr = [];
-const allStyleImages = $('*[data-style-image]');
-allStyleImages.map((index, elem) => {
-    const _elem = $(elem);
-    const imageLink = _elem.data('style-image').replace(/ /g, '');
-    allStyleImagesArr.push({
-        elem: elem,
-        url: `images/${imageLink}`
-    })
-    _elem.removeAttr('data-style-image');
+
+const openingMenu = $('.opening-menu');
+
+openingMenu.on('click', function (){
+    const _thisElem = $(this);
+    const _thisNextElem = $(this).children('.submenu');
+
+    if(_thisElem.hasClass(active)){
+        _thisElem.removeClass(active);
+        _thisNextElem.removeClass(active);
+    } else {
+        _thisElem.addClass(active);
+        _thisNextElem.addClass(active);
+    }
 })
-
-function startConvertImage(){
-    allStyleImagesArr.forEach((arr) => {
-        const _elem = $(arr.elem);
-        _elem.css('background-image', `url(${arr.url})`);
-        _elem.removeAttr('data-style-image');
-    })
-}
-
 
 // const siteForms = $('form.site-form');
 // const thanksModal = new bootstrap.Modal(document.getElementById('thanksModal'), {

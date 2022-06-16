@@ -423,3 +423,24 @@ a:hover {
       @media (max-width: 768px) {
         .send-orders .yellow-solid .map-block {
           display: none; } }
+
+.opening-menu {
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  .opening-menu i {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  .opening-menu.active {
+    -webkit-backdrop-filter: brightness(0.5);
+            backdrop-filter: brightness(0.5); }
+    .opening-menu.active i {
+      -webkit-transform: rotate(-180deg);
+              transform: rotate(-180deg); }
+
+.submenu {
+  max-height: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  overflow: hidden; }
+  .submenu.active {
+    max-height: 18.75rem; }
