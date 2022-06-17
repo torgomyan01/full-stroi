@@ -19,16 +19,20 @@
   <link rel="stylesheet" href="css/fancybox.css">
   <link rel="stylesheet" href="css/helper.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick.css">
 
 
   <!-- JS -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/popper.min.js"></script>
+  <script src="js/slick.min.js"></script>
 <!--  <script src="js/fancybox.esm.js"></script>-->
 
+<!--  <link rel="icon" type="image/x-icon" href="favicon.ico">-->
+
   <script type="module">
-    // import Fancybox from 'js/fancybox.esm.js';
+      import { Fancybox } from './js/fancybox.esm.js';
   </script>
 
 </head>
@@ -36,131 +40,12 @@
 <body>
 
 
-<header>
-  <div class="header-body">
-    <div class="header-polygon"></div>
-    <div class="header-slider-block">
-      <div>
+<component src="components/header.html"></component>
 
-        <div>
-          <h1 class="fs30 fs40-md c-while fw-bold text-uppercase">
-            Благоустройство
-          </h1>
-          <p class="fs20 c-while fw-light line-height-24">
-            Дорожно-строительная компания «Асфальт-Строй» выполнит все работы по благоустройству
-            территории. Благоустройство территории - важнейшая задача при освоении любого участка, будь
-            то частный дачный участок или же большой городской микрорайон.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</header>
+<component src="components/navbar.html"></component>
 
 
-<div class="menu-site">
-  <div class="d-flex justify-content-start">
-    <a href="/" class="fs40 c-yellow fw-bold trans me-5 d-none d-md-block">
-      FULL-STROI
-    </a>
-    <a href="/" class="fs40 c-yellow fw-bold trans d-block d-md-none">
-      FS
-    </a>
-    <div class="menu-items-body d-none d-xl-flex">
-      <a href="#" class="menu-items active">Главная</a>
-      <a href="#" class="menu-items">О компании</a>
-      <a href="#" class="menu-items">Услуг</a>
-      <a href="#" class="menu-items">Контакты</a>
-      <a href="#" class="menu-items">Прайс-лист</a>
-    </div>
-  </div>
-  <div class="mobile-menu-board">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="info-block">
-    <a href="tel:89137584587" class="c-yellow trans me-3 fs20 d-none d-sm-inline-block">
-      <i class="fa-solid fa-phone "></i>
-      89137584587
-    </a>
-    <a href="#" class="c-whatsapp-green fs44 me-2 trans">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    <a href="#" class="c-telegram-green fs44 trans">
-      <i class="fa-brands fa-telegram"></i>
-    </a>
-  </div>
-</div>
-<div class="mobile-menu">
-  <div class="py-3 text-center mt-128 fs20 text-uppercase border-bottom">
-    <a href="#" class="c-while">
-      Главная
-    </a>
-  </div>
-  <div class="py-3 text-center fs20 text-uppercase border-bottom">
-    <a href="#" class="c-while">
-      О компании
-    </a>
-  </div>
-  <div class="py-3 text-center fs20 text-uppercase border-bottom opening-menu">
-    <span class="c-while">
-      Услуги
-      <i class="fa-solid fa-angle-down trans"></i>
-    </span>
-    <div class="submenu">
-      <div class="py-3 text-center fs20 text-uppercase border-bottom">
-        <a href="#" class="c-while">
-          Асфальтирование
-        </a>
-      </div>
-      <div class="py-3 text-center fs20 text-uppercase border-bottom">
-        <a href="#" class="c-while">
-          Благоустройство
-        </a>
-      </div>
-      <div class="py-3 text-center fs20 text-uppercase border-bottom">
-        <a href="#" class="c-while">
-          Асфальт
-        </a>
-      </div>
-      <div class="py-3 text-center fs20 text-uppercase border-bottom">
-        <a href="#" class="c-while">
-          Асфальтовая крошка
-        </a>
-      </div>
-      <div class="py-3 text-center fs20 text-uppercase border-bottom">
-        <a href="#" class="c-while">
-          Торф
-        </a>
-      </div>
-      <div class="py-3 text-center fs20 text-uppercase border-bottom">
-        <a href="#" class="c-while">
-          Доставка
-        </a>
-      </div>
-      <div class="py-3 text-center fs20 text-uppercase border-bottom">
-        <a href="#" class="c-while">
-          Аренда техники
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="py-3 text-center fs20 text-uppercase border-bottom">
-    <a href="#" class="c-while">
-      Контакты
-    </a>
-  </div>
-  <div class="py-3 text-center fs20 text-uppercase border-bottom">
-    <a href="#" class="c-while">
-      Прайс-лист
-    </a>
-  </div>
-</div>
-
-
-<div class="wrapper">
+<div class="wrapper" id="about-us">
   <div class="row mt-70">
     <div class="col-12 col-md-6">
       <img src="images/About-company.png" alt="About Company" class="w-100">
@@ -272,77 +157,39 @@
   </div>
 </div>
 
-<div class="wrapper">
-  <div class="row">
-    <div class="col-12 col-md-6 col-xl-3 mb-3">
-      <div class="we-items">
-        <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">1</h1>
-        <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
-          Самые удобные цены у нас
-        </p>
+<h1 class="c-block text-center fs30 fs40-md text-uppercase mt-66 fw-bold">А это наша работы </h1>
+
+
+<div class="our-works-blocks">
+  <div class="work-solid" style="width: calc(31.25rem * 10)">
+
+    <!--    one-->
+
+
+
+    <div class="d-flex flex-column">
+      <div class="d-flex justify-content-start">
+        <a href="images/slider/8.jpg" data-fancybox="gallery" >
+          <div class="min-img" data-style-image="slider/8.jpg"></div>
+        </a>
+        <a href="images/slider/9.jpg" data-fancybox="gallery" >
+          <div class="min-img" data-style-image="slider/9.jpg"></div>
+        </a>
+      </div>
+      <div class="d-flex justify-content-start">
+        <a href="images/slider/10.jpg" data-fancybox="gallery" >
+          <div class="min-img" data-style-image="slider/10.jpg"></div>
+        </a>
+        <a href="images/slider/11.jpg" data-fancybox="gallery" >
+          <div class="min-img" data-style-image="slider/11.jpg"></div>
+        </a>
       </div>
     </div>
-    <div class="col-12 col-md-6 col-xl-3 mb-3">
-      <div class="we-items">
-        <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">2</h1>
-        <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
-          Более 15 лет в этой сфере
-        </p>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-xl-3 mb-3">
-      <div class="we-items">
-        <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">3</h1>
-        <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
-          современнымиЕ техниками
-        </p>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-xl-3 mb-3">
-      <div class="we-items">
-        <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">4</h1>
-        <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
-          Доставка в срок и качество
-        </p>
-      </div>
-    </div>
+
   </div>
 </div>
 
-<div class="mt-70">
-  <div class="row me-0">
-    <div class="col-12 col-sm-6 order-2 order-sm-1 mt-3 mt-md-0">
-      <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A64bd4283afbeffe1bd1ed74a6fb7c648ff227693f9ebcafff889967b9b0c9b6c&amp;source=constructor"
-          width="100%"
-          height="589"
-          frameborder="0"></iframe>
-    </div>
-    <div class="col-12 col-sm-6 order-1 order-sm-2 ps-4 ps-md-0">
-      <h1 class="c-block fs32 fs40-md text-uppercase line-height-24 fw-bold mt-3">Контакты</h1>
-      <p class="c-block fs16 fs20-md mt-36 d-flex align-items-center">
-        <i class="fas fa-map-marker-alt c-yellow fs20 fs30-md me-2"></i>
-        Московская область, Одинцовский район, пос. Назарево
-      </p>
-      <p class="c-block fs16 fs20-md mt-24 d-flex align-items-center">
-        <i class="fas fa-envelope c-yellow fs20 fs30-md me-2"></i>
-        info@asfalt-stroi.ru
-      </p>
-      <p class="c-block fs16 fs20-md mt-24 d-flex align-items-center">
-        <i class="fas fa-phone-alt c-yellow fs20 fs30-md me-2"></i>
-        8 (926) 104 56 97
-      </p>
-      <p class="c-block fs16 fs20-md mt-24 d-flex align-items-center">
-        <i class="fab fa-whatsapp c-yellow fs20 fs30-md c-whatsapp-green me-2"></i>
-        8 (926) 104 56 97
-      </p>
-      <p class="c-block fs16 fs20-md mt-24 d-flex align-items-center">
-        <i class="fas fa-clock c-yellow fs20 fs30-md me-2"></i>
-        Часы работы: с 9:00 до 19:00
-      </p>
-    </div>
-  </div>
-</div>
+<component src="components/contacts.html"></component>
 
 <div class="full-stroi mt-128">
   <h1 class="c-while pt-56 fs40 fs50-md text-uppercase fw-bold text-center">FULL STROI</h1>
@@ -358,6 +205,8 @@
     Все права защищена 2007 - 2022
   </p>
 </div>
+
+<script src="js/com.js"></script>
 
 <script src="js/script.js"></script>
 </body>
