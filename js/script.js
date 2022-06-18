@@ -4,6 +4,10 @@ const {active, none, fix} = {
     fix: 'fix'
 }
 
+$(window).on('load', function (){
+    $('.preloader-block').addClass('closed');
+})
+
 const mobileMenu = $('.mobile-menu-board');
 const _menu = $('.mobile-menu');
 
@@ -189,125 +193,105 @@ const sliderGalleryImages = [
 ]
 
 
-const sliderTemplate = [
-    {
-        imgCount: 3,
-        f:  function (url1,url2,url3){
-            return `
+const sliderHtmlTemplates = (arr) => {
+    return `
             <div class="d-flex flex-column">
               <div class="d-flex justify-content-center align-items-center">
-                <a href="${url1}" data-fancybox="gallery" >
-                  <div class="min-img"  style="background-image: url(${url1})"></div>
+                <a href="images/slider/${arr[0]}" data-fancybox="gallery" >
+                  <div class="min-img"  style="background-image: url(images/slider/${arr[0]})"></div>
                 </a>
-                <a href="${url2}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url2})"></div>
+                <a href="images/slider/${arr[1]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[1]})"></div>
                 </a>
               </div>
-              <a href="${url3}" data-fancybox="gallery" >
-                <div class="max-min" style="background-image: url(${url3})"></div>
+              <a href="images/slider/${arr[2]}" data-fancybox="gallery" >
+                <div class="max-min" style="background-image: url(images/slider/${arr[2]})"></div>
               </a>
             </div>
-        `
-        }
-    },
-    {
-        imgCount: 3,
-        f: function (url1,url2,url3){
-            return `
             <div class="d-flex flex-column">
               <div class="d-flex justify-content-center align-items-center">
-                <a href="${url1}" data-fancybox="gallery" >
-                  <div class="min-img"  style="background-image: url(${url1})"></div>
+                <a href="images/slider/${arr[3]}" data-fancybox="gallery" >
+                  <div class="min-img"  style="background-image: url(images/slider/${arr[3]})"></div>
                 </a>
-                <a href="${url2}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url2})"></div>
+                <a href="images/slider/${arr[4]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[4]})"></div>
                 </a>
               </div>
-              <a href="${url3}" data-fancybox="gallery" >
-                <div class="max-min" style="background-image: url(${url3})"></div>
+              <a href="images/slider/${arr[5]}" data-fancybox="gallery" >
+                <div class="max-min" style="background-image: url(images/slider/${arr[5]})"></div>
               </a>
             </div>
-        `
-        },
-    },
-    {
-        imgCount: 1,
-        f: function (url1){
-            return `
-           <a href="${url1}" data-fancybox="gallery" >
-              <div class="max-img" style="background-image: url(${url1})"></div>
+            <a href="images/slider/${arr[6]}" data-fancybox="gallery" >
+              <div class="max-img" style="background-image: url(images/slider/${arr[6]})"></div>
             </a>
-        `
-        },
-    },
-    {
-        imgCount: 4,
-        f: function (url1,url2,url3){
-            return `
             <div class="d-flex justify-content-start align-items-start flex-column">
-              <a href="${url1}" data-fancybox="gallery" >
-                <div class="max-min" style="background-image: url(${url1})"></div>
+              <a href="images/slider/${arr[7]}" data-fancybox="gallery" >
+                <div class="max-min" style="background-image: url(images/slider/${arr[7]})"></div>
               </a>
               <div class="d-flex justify-content-start">
-                <a href="${url2}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url2})"></div>
+                <a href="images/slider/${arr[8]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[8]})"></div>
                 </a>
-                <a href="${url3}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url3})"></div>
+                <a href="images/slider/${arr[9]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[9]})"></div>
                 </a>
               </div>
             </div>
-        `
-        },
-    },
-    {
-        imgCount: 3,
-        f: function (url1,url2,url3){
-            return `
             <div class="d-flex justify-content-start align-items-start flex-column">
-              <a href="${url1}" data-fancybox="gallery" >
-                <div class="max-min" style="background-image: url(${url1})"></div>
+              <a href="images/slider/${arr[10]}" data-fancybox="gallery" >
+                <div class="max-min" style="background-image: url(images/slider/${arr[10]})"></div>
               </a>
               <div class="d-flex justify-content-start">
-                <a href="${url2}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url2})"></div>
+                <a href="images/slider/${arr[11]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[11]})"></div>
                 </a>
-                <a href="${url3}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url3})"></div>
-                </a>
-              </div>
-            </div>
-        `
-        },
-    },
-    {
-        imgCount: 3,
-        f: function (url1,url2,url3){
-            return `
-            <div class="d-flex flex-column">
-              <div class="d-flex justify-content-start">
-                <a href="${url1}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url1})"></div>
-                </a>
-                <a href="${url2}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url2})"></div>
-                </a>
-              </div>
-              <div class="d-flex justify-content-start">
-                <a href="${url3}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url3})"></div>
-                </a>
-                <a href="${url4}" data-fancybox="gallery" >
-                  <div class="min-img" style="background-image: url(${url4})"></div>
+                <a href="images/slider/${arr[12]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[12]})"></div>
                 </a>
               </div>
             </div>
-        `
-        },
+             <div class="d-flex flex-column">
+              <div class="d-flex justify-content-start">
+                <a href="images/slider/${arr[13]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[13]})"></div>
+                </a>
+                <a href="images/slider/${arr[14]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[14]})"></div>
+                </a>
+              </div>
+              <div class="d-flex justify-content-start">
+                <a href="images/slider/${arr[15]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[15]})"></div>
+                </a>
+                <a href="images/slider/${arr[16]}" data-fancybox="gallery" >
+                  <div class="min-img" style="background-image: url(images/slider/${arr[16]})"></div>
+                </a>
+              </div>
+            </div>
+`
+};
+
+let ArrUrls = [];
+let ArrUrlsCount = 0;
+
+sliderGalleryImages.forEach((url, index) => {
+    if(ArrUrlsCount < 18){
+        ArrUrls.push(url);
+    } else {
+        $('.work-solid').append(sliderHtmlTemplates(ArrUrls));
+        ArrUrlsCount = 0;
+        ArrUrls = [];
     }
-]
+
+    if(index <= sliderGalleryImages.length - 1) {
+        ArrUrlsCount++
+    } else {
+        $('.work-solid').append(sliderHtmlTemplates(ArrUrls));
+        ArrUrlsCount = 0;
+    }
 
 
+})
 
 
 // let allStyleImagesArr = [];

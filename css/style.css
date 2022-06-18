@@ -533,6 +533,87 @@ a:hover {
             transform-origin: top;
     opacity: 0; }
 
+.min-img {
+  width: 15.625rem;
+  height: 15.625rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative; }
+  .min-img:hover {
+    z-index: 10;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  .min-img:after {
+    content: "\f06e";
+    position: absolute;
+    font-size: 1.25rem;
+    color: #fff;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    font-family: 'FontAwesome', serif;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+  .min-img:hover:after {
+    opacity: 1; }
+
+.max-img {
+  width: 31.25rem;
+  height: 31.25rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative; }
+  .max-img:hover {
+    z-index: 10;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  .max-img:after {
+    content: "\f06e";
+    position: absolute;
+    font-size: 1.25rem;
+    color: #fff;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    font-family: 'FontAwesome', serif;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+  .max-img:hover:after {
+    opacity: 1; }
+
+.max-min {
+  width: 31.25rem;
+  height: 15.625rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative; }
+  .max-min:hover {
+    z-index: 10;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  .max-min:after {
+    content: "\f06e";
+    position: absolute;
+    font-size: 1.25rem;
+    color: #fff;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    font-family: 'FontAwesome', serif;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+  .max-min:hover:after {
+    opacity: 1; }
+
 .our-works-blocks {
   overflow: hidden; }
   .our-works-blocks .work-solid {

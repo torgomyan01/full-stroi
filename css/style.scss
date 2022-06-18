@@ -141,11 +141,33 @@ a{
     padding: 10px;
   }
 }
+@mixin imgHover(){
+  transition: 0.3s;
+  &:hover{
+    z-index: 10;
+    transform: scale(1.05);
+  }
+}
 
-// .container{
-//   max-width: 1300px;
-// }
-
+@mixin preview(){
+  position: relative;
+  &:after{
+    content: "\f06e";
+    position: absolute;
+    font-size: 1.25rem;
+    color: #fff;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    font-family: 'FontAwesome', serif;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &:hover{
+    &:after{
+      opacity: 1;
+    }
+  }
+}
 
 
 .c-block{
@@ -590,6 +612,34 @@ a{
     transform-origin: top;
     opacity: 0;
   }
+}
+
+
+
+.min-img{
+  width: 15.625rem;
+  height: 15.625rem;
+  @include bg;
+  @include imgHover;
+  @include preview;
+}
+
+
+
+.max-img{
+  width: 31.25rem;
+  height: 31.25rem;
+  @include bg;
+  @include imgHover;
+  @include preview;
+}
+
+.max-min{
+  width: 31.25rem;
+  height: 15.625rem;
+  @include bg;
+  @include imgHover;
+  @include preview;
 }
 
 
