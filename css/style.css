@@ -686,3 +686,9 @@ a:hover {
 
 .min-h-450 {
   min-height: 28.125rem; }
+
+table {
+  border-collapse: collapse; }
+
+table, th, td {
+  border: 1px solid; }
