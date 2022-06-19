@@ -315,10 +315,10 @@ sliderGalleryImages.forEach((url, index) => {
 // }
 
 
-// const siteForms = $('form.site-form');
-// const thanksModal = new bootstrap.Modal(document.getElementById('thanksModal'), {
-//     keyboard: false
-// })
+const siteForms = $('form.site-form');
+const thanksModal = new bootstrap.Modal(document.getElementById('thanksModal'), {
+    keyboard: false
+})
 
 
 
