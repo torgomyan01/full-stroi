@@ -631,16 +631,16 @@ a:hover {
             transform: translateX(0);
     -webkit-animation-name: work-gallery;
             animation-name: work-gallery;
-    -webkit-animation-duration: 120s;
-            animation-duration: 120s;
+    -webkit-animation-duration: 220s;
+            animation-duration: 220s;
     -webkit-animation-direction: inherit;
             animation-direction: inherit;
-    -webkit-animation-timing-function: inherit;
-            animation-timing-function: inherit;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; }
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease; }
     .our-works-blocks .work-solid:hover {
       -webkit-animation-play-state: paused;
               animation-play-state: paused; }
@@ -692,3 +692,18 @@ table {
 
 table, th, td {
   border: 1px solid; }
+
+.btn-to-top {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #E4A30C;
+  color: #fff;
+  right: 30px;
+  bottom: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0; }
+  .btn-to-top.active {
+    opacity: 1; }

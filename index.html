@@ -20,21 +20,22 @@
   <link rel="stylesheet" href="css/helper.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/slick.css">
-
+  <link href="css/aos.css" rel="stylesheet">
 
   <!-- JS -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/aos.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <script type="module">
-      import { Fancybox } from './js/fancybox.esm.js';
+    import {Fancybox} from './js/fancybox.esm.js';
   </script>
 
   <style>
-      .preloader-block{
+      .preloader-block {
           position: fixed;
           top: 0;
           left: 0;
@@ -48,10 +49,12 @@
           backdrop-filter: blur(10px);
           transition: 0.5s;
       }
-      .preloader-block.closed{
+
+      .preloader-block.closed {
           left: -100%;
           opacity: 0;
       }
+
       #loader {
           display: block;
           position: relative;
@@ -66,6 +69,7 @@
           -webkit-animation: spin 2s linear infinite;
           animation: spin 2s linear infinite;
       }
+
       #loader:before {
           content: "";
           position: absolute;
@@ -79,6 +83,7 @@
           -webkit-animation: spin 3s linear infinite;
           animation: spin 3s linear infinite;
       }
+
       #loader:after {
           content: "";
           position: absolute;
@@ -92,8 +97,9 @@
           -webkit-animation: spin 1.5s linear infinite;
           animation: spin 1.5s linear infinite;
       }
+
       @-webkit-keyframes spin {
-          0%   {
+          0% {
               -webkit-transform: rotate(0deg);
               -ms-transform: rotate(0deg);
               transform: rotate(0deg);
@@ -104,8 +110,9 @@
               transform: rotate(360deg);
           }
       }
+
       @keyframes spin {
-          0%   {
+          0% {
               -webkit-transform: rotate(0deg);
               -ms-transform: rotate(0deg);
               transform: rotate(0deg);
@@ -139,150 +146,163 @@
 <component src="components/navbar.html"></component>
 
 
-<div class="wrapper" id="about-us">
-  <div class="row mt-70">
-    <div class="col-12 col-md-6">
-      <img src="images/About-company.png" alt="About Company" class="w-100">
-    </div>
-    <div class="col-12 col-md-6 mt-3 mt-md-0">
-      <h1 class="fs30 fs40-md fw-bold c-block text-uppercase text-center text-md-start">О компании</h1>
-      <p class="fs18 c-block text-center text-md-start">
-        Компания «ФУЛЛ-СТРОЙ» работает с 2000 г. и в нашей компании работают только опытные профессионалы
-        своего дела,
-        сплоченный коллектив единомышленников, способный решать задачи любой сложности.
-        В нашем коллективе трудятся и созидают высококлассные рабочие и инженерно-технические работники. Они
-        гарантируют
-        Вам 100% ответственности за качество и сроки строительства Мы асфальтируем автомобильные дороги,
-        улицы и
-        магистрали, аэродромы, стоянки для машин, складские и промышленные, спортивные площадки.Компания
-        «ФУЛЛ-СТРОЙ»
-        обладает мощной производственной базой, самой передовой техникой известных мировых производителей.
-        Мы также
-        предлагаем услуги по аренде спецтехники для строительства и ремонта дорог.
-      </p>
-    </div>
-  </div>
-</div>
-
-
-<h1 class="c-block text-center fs30 fs40-md text-uppercase mt-66 fw-bold">А это наша работы </h1>
-
-
-<div class="our-works-blocks mt-70">
-  <div class="work-solid" style="width: calc(31.25rem * 10)">
-
-
-  </div>
-</div>
-
-<h1 class="c-block text-center fs30 fs40-md text-uppercase mt-70 mb-70 fw-bold">Почему выбрать нас</h1>
-<div class="wrapper">
-  <div class="row">
-    <div class="col-12 col-md-6 col-xl-3 mb-3">
-      <div class="we-items">
-        <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">1</h1>
-        <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
-          Самые удобные цены у нас
-        </p>
+<div class="overflow-hidden">
+  <div class="wrapper" id="about-us">
+    <div class="row mt-70">
+      <div class="col-12 col-md-6">
+        <img src="images/About-company.png" alt="About Company" class="w-100" data-aos="fade-up">
       </div>
-    </div>
-    <div class="col-12 col-md-6 col-xl-3 mb-3">
-      <div class="we-items">
-        <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">2</h1>
-        <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
-          Более 15 лет в этой сфере
-        </p>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-xl-3 mb-3">
-      <div class="we-items">
-        <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">3</h1>
-        <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
-          современнымиЕ техниками
-        </p>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-xl-3 mb-3">
-      <div class="we-items">
-        <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">4</h1>
-        <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
-          Доставка в срок и качество
+      <div class="col-12 col-md-6 mt-3 mt-md-0" data-aos="fade-down">
+        <h1 class="fs30 fs40-md fw-bold c-block text-uppercase text-center text-md-start">О компании</h1>
+        <p class="fs18 c-block text-center text-md-start">
+          Компания «ФУЛЛ-СТРОЙ» работает с 2000 г. и в нашей компании работают только опытные профессионалы
+          своего дела,
+          сплоченный коллектив единомышленников, способный решать задачи любой сложности.
+          В нашем коллективе трудятся и созидают высококлассные рабочие и инженерно-технические работники. Они
+          гарантируют
+          Вам 100% ответственности за качество и сроки строительства Мы асфальтируем автомобильные дороги,
+          улицы и
+          магистрали, аэродромы, стоянки для машин, складские и промышленные, спортивные площадки.Компания
+          «ФУЛЛ-СТРОЙ»
+          обладает мощной производственной базой, самой передовой техникой известных мировых производителей.
+          Мы также
+          предлагаем услуги по аренде спецтехники для строительства и ремонта дорог.
         </p>
       </div>
     </div>
   </div>
-</div>
 
-<h1 class="c-block text-center fs30 fs40-md text-uppercase mb-70 mt-90 fw-bold">Связаться с нами</h1>
 
-<div class="send-orders mt-3">
-  <div class="yellow-solid">
-    <div class="wrapper">
-      <div class="row mt-120">
-        <div class="col-12 col-md-4">
-          <form action="#" method="post" class="form-order">
-            <label class="def-input">
-              <span>Ваше имя</span>
-              <input type="text" name="name">
-            </label>
-            <label class="def-input">
-              <span>Ваше Email</span>
-              <input type="email" name="email">
-            </label>
-            <label class="def-textarea mt-3">
-              <textarea name="message" cols="30" rows="5" placeholder="Сообщения"></textarea>
-            </label>
-            <div class="d-flex justify-content-center mt-2">
-              <button class="btn bgc-while c-yellow">Отправить </button>
-            </div>
-            <div class="d-flex justify-content-center my-2 c-while">
-              ИЛИ
-            </div>
-            <div class="d-flex justify-content-around align-items-center">
-              <button class="btn bgc-while c-whatsapp-green">
-                <i class="fa-solid fa-phone"></i>
-                Позвонить
-              </button>
-              <button class="btn bgc-while c-whatsapp-green">
-                <i class="fa-brands fa-whatsapp"></i>
-                Whatsapp
-              </button>
-            </div>
-          </form>
+  <h1 class="c-block text-center fs30 fs40-md text-uppercase mt-66 fw-bold" data-aos="fade-right">А это наша работы </h1>
+
+
+  <div class="our-works-blocks mt-70">
+    <div class="work-solid" style="width: calc(31.25rem * 20)"></div>
+  </div>
+
+
+  <h1 class="c-block text-center fs30 fs40-md text-uppercase mt-70 mb-70 fw-bold">Почему выбрать нас</h1>
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-xl-3 mb-3" data-aos="fade-right">
+        <div class="we-items">
+          <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">1</h1>
+          <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
+            Самые удобные цены у нас
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3" data-aos="fade-right">
+        <div class="we-items">
+          <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">2</h1>
+          <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
+            Более 15 лет в этой сфере
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3" data-aos="fade-left">
+        <div class="we-items">
+          <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">3</h1>
+          <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
+            современнымиЕ техниками
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3" data-aos="fade-left">
+        <div class="we-items">
+          <h1 class="c-yellow fs86 fs96-md text-uppercase fw-bold text-center">4</h1>
+          <p class="c-block fs26 fs30-md text-center text-uppercase line-height-36">
+            Доставка в срок и качество
+          </p>
         </div>
       </div>
     </div>
-    <div class="map-block">
-      <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A64bd4283afbeffe1bd1ed74a6fb7c648ff227693f9ebcafff889967b9b0c9b6c&amp;source=constructor"
-          width="100%"
-          height="100%"
-          frameborder="0"></iframe>
+  </div>
+
+  <h1 class="c-block text-center fs30 fs40-md text-uppercase mb-70 mt-90 fw-bold">Связаться с нами</h1>
+
+  <div class="send-orders mt-3">
+    <div class="yellow-solid">
+      <div class="wrapper">
+        <div class="row mt-120">
+          <div class="col-12 col-md-4">
+            <form action="#" method="post" class="form-order">
+              <label class="def-input">
+                <span>Ваше имя</span>
+                <input type="text" name="name">
+              </label>
+              <label class="def-input">
+                <span>Ваше Email</span>
+                <input type="email" name="email">
+              </label>
+              <label class="def-textarea mt-3">
+                <textarea name="message" cols="30" rows="5" placeholder="Сообщения"></textarea>
+              </label>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn bgc-while c-yellow">Отправить</button>
+              </div>
+              <div class="d-flex justify-content-center my-2 c-while">
+                ИЛИ
+              </div>
+            </form>
+            <div class="d-flex justify-content-around align-items-center">
+              <a href="tel:9060680003">
+                <button class="btn bgc-while c-whatsapp-green">
+                  <i class="fa-solid fa-phone"></i>
+                  Позвонить
+                </button>
+              </a>
+              <a href="https://wa.me/+79060680003" target="_blank">
+                <button class="btn bgc-while c-whatsapp-green">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Whatsapp
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-block">
+        <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A64bd4283afbeffe1bd1ed74a6fb7c648ff227693f9ebcafff889967b9b0c9b6c&amp;source=constructor"
+            width="100%"
+            height="100%"
+            frameborder="0"></iframe>
+      </div>
     </div>
   </div>
-</div>
 
 
-<component src="components/contacts.html"></component>
+  <component src="components/contacts.html"></component>
 
-<div class="full-stroi mt-128">
-  <h1 class="c-while pt-56 fs40 fs50-md text-uppercase fw-bold text-center">FULL STROI</h1>
-  <div class="d-flex justify-content-center align-items-center">
-    <a href="#">
-      <i class="fab fa-telegram fs38 fs46-md p-16 c-telegram-green "></i>
-    </a>
-    <a href="#">
-      <i class="fab fa-whatsapp fs38 fs46-md c-whatsapp-green"></i>
-    </a>
+  <div class="full-stroi mt-128">
+    <h1 class="c-while pt-56 fs40 fs50-md text-uppercase fw-bold text-center">FULL STROI</h1>
+    <div class="d-flex justify-content-center align-items-center">
+      <a href="#">
+        <i class="fab fa-telegram fs38 fs46-md p-16 c-telegram-green "></i>
+      </a>
+      <a href="#">
+        <i class="fab fa-whatsapp fs38 fs46-md c-whatsapp-green"></i>
+      </a>
+    </div>
+    <p class="c-while text-center p-38 fs14 fs18-md ">
+      Все права защищена 2007 - 2022
+    </p>
   </div>
-  <p class="c-while text-center p-38 fs14 fs18-md ">
-    Все права защищена 2007 - 2022
-  </p>
+
 </div>
+
+<button class="btn btn-to-top active">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
 
 <script src="js/com.js"></script>
 
 <script src="js/script.js"></script>
+
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>

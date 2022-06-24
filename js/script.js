@@ -190,7 +190,54 @@ const sliderGalleryImages = [
     '69.jpeg',
     '70.jpeg',
     '71.jpeg',
+    '72.jpg',
+    '73.jpg',
+    '90.jpg',
+    '99.jpg',
+    '87.jpg',
+    '79.jpg',
+    '91.jpg',
+    '77.jpg',
+    '81.jpg',
+    '80.jpg',
+    '93.jpg',
+    '83.jpg',
+    '78.jpg',
+    '82.jpg',
+    '85.jpg',
+    '92.jpg',
+    '89.jpg',
+    '98.jpg',
+    '97.jpg',
+    '75.jpg',
+    '96.jpg',
+    '95.jpg',
+    '88.jpg',
+    '84.jpg',
+    '76.jpg',
+    '86.jpg',
+    '74.jpg',
 ]
+const btnToTop = $('.btn-to-top');
+
+
+$(window).on('scroll', function (e){
+    const scrollTop = $(e.target).scrollTop();
+    btnTop(scrollTop);
+})
+
+btnToTop.on('click', function (){
+    $(window).scrollTop(0);
+})
+
+function btnTop(scrollTop){
+    if(scrollTop > 200){
+        btnToTop.addClass(active);
+    } else {
+        btnToTop.removeClass(active);
+    }
+}
+
 
 
 const sliderHtmlTemplates = (arr) => {

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stroi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fancybox.css">
+  <link rel="stylesheet" href="css/helper.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick.css">
+
+
+  <!-- JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style>
+      th, td {
+          padding: 10px;
+      }
+  </style>
+
+</head>
+
+<body>
+
+
+<component src="components/header.html" props="{
+            headerHeight: 50rem;
+           }"></component>
+
+<component src="components/navbar.html"></component>
+
+
+<div class="wrapper">
+  <h1 class="c-block text-center fs30 fs40-md text-uppercase mb-30 mb-sm-70 mt-70 fw-bold">
+    Прайс-лист
+  </h1>
+
+  <div class="row">
+    <div class="col-12 col-sm-5">
+      <img src="images/pages-images/price-list.svg" alt="price-list" class="w-100">
+
+    </div>
+    <div class="col-12 col-sm-7 mt-3 mt-sm-0">
+      <table border="2" style="border-spacing: 30px;">
+        <tbody>
+        <tr>
+          <td valign="top"> <p align="center"><strong>Наименование</strong></p></td>
+          <td valign="top"><p align="center"><strong>Единица измерения</strong></p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Осмотр территории, консультация</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Выезд специалиста на объект</p></td>
+          <td colspan="2" valign="top"><p align="center">бесплатно</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Консультация на участке</p></td>
+          <td colspan="2" valign="top"><p align="center">бесплатно</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Составление предварительной сметы затрат</p></td>
+          <td colspan="2" valign="top"><p align="center">бесплатно</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Асфальтобетонные работы</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Укладка асфальтобетонного покрытия (толщина 5 см.)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Разборка асфальтобетонного покрытия с последующим вывозом (толщина 5 см.)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство земляного корыта со всеми подготовительными работами (механизированная разработка
+            грунта с погрузкой на автомобили, доработка грунта вручную, планировка территории под отметку) (толщина 5
+            см.)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство основания из песка (толщина 10 см.)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство основания из щебня известнякового (толщина 10 см.)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство бетонного основания (толщина 10 см.)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство бетонного основания с армированием дорожной сеткой, (толщина 10 см.)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Вывоз грунта и мусора автосамосвалами, включая погрузку</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Демонтаж дорожных плит</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство покрытия из дорожных плит (3Х1,75 м)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Разборка дорожного бортового камня, с вывозом строительного мусора</p></td>
+          <td colspan="2" valign="top"><p align="center">м/п</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Установка дорожного бортового камня, включая стоимость материала</p></td>
+          <td colspan="2" valign="top"><p align="center">м/п</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Ремонт и поднятия горловин существующих колодцев ж/б кольцами до 20 см.</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Демонтаж тротуарной плитки</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство покрытия из тротуарной плитки с учетом стоимости плитки и устройства основания из
+            сухой цементно-песчаной смеси</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство газонов с выравниванием плодородного грунта, подсыпкой растительного грунта и
+            посевом семян трав</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Благоустройство</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Выезд на объект, сбор первичных материалов (замеры, фотосъемка), обсуждение концепции
+            озеленения и благоустройства территории</p></td>
+          <td colspan="2" valign="top"><p align="center">бесплатно</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Смета. Техзадание. Дизайн проект</p></td>
+          <td colspan="2" valign="top"><p align="center">бесплатно</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Ландшафтные работы</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Сбор и вывоз строительного мусора, грунта</p></td>
+          <td colspan="2" valign="top"><p align="center">1 м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Рубка деревьев</p></td>
+          <td colspan="2" valign="top"><p align="center">1 шт.</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Рубка кустарников</p></td>
+          <td colspan="2" valign="top"><p align="center">1 шт.</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Корчевка и удаление пней</p></td>
+          <td colspan="2" valign="top"><p align="center">1 шт.</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Санитарная обрезка (Древесные породы)</p></td>
+          <td colspan="2" valign="top"><p align="center">1 м2</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Устройство газона</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Газон посевной без замены грунта (планировочные работы, посев, первое кошение)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Газон посевной с заменой грунта 10-15 см (планировочные работы, посев, заправка грунтами,
+            первое кошение, укрытие, 1-ая прополка)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Газон рулонный без замены грунта (планировочные работы, устройство газона, первое кошение)</p>
+          </td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Газон рулонный с заменой грунта 10-15 см (планировочные работы, заправка грунтами, устройство
+            газона, первое кошение, 1-ая прополка)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Газон рулонный на георешетке с заменой грунта 10-15 см (для склонов и площадей с высокой
+            рекреационной нагрузкой, 1-ая прополка)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Газон мавританский с заменой грунта 10-15 см (планировочные работы, заправка грунтами,
+            посев)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Газон искусственный со снятием грунта до 10 см. (планировка отсыпка территории щебнем и
+            песком)</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Устройство цветников</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Создание цветников из летников (планировка, подготовка почвы с внесением земляной смеси и
+            удобрений в посадочное место, посадка)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Создание цветников из многолетников (планировка, подготовка почвы с внесением земляной смеси и
+            удобрений в посадочное место, посадка)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Посадка деревьев и кустарников</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Посадка любых растений, в том числе экзотических, включая стоимость расходных материалов
+            гарантия - 1 год.</p></td>
+          <td colspan="3" valign="top"><p>30% от стоимости растений</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Устройство площадок и дорожек</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство площадок и дорожек на газонной решётке с мягким покрытием</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство площадок и дорожек из гранитной брусчатки на бетонном основании</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство площадок и дорожек из декоративной плитки на бетонном основании</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство&nbsp; газонной дорожки из натурального камня на песчаном основании</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство&nbsp; газонной дорожки из древесных спилов (толщина ~ 20 см)</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство насыпи, установка камней</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство площадок и дорожек с мягким покрытием, из древесной коры или щепы, мраморной
+            крошки</p></td>
+          <td colspan="2" valign="top"><p align="center">м2</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Устройство дренажной системы</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство системы дренажа (устройство песчано-гравийного основания, прокладка дренажных труб,
+            соединение дренажных труб, ввод дрен в дренажные колодцы, укладка геотекстиля)</p></td>
+          <td colspan="2" valign="top"><p align="center">м.п.</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство бетонных дренажных колодцев: выемка грунта под колодец, устройство дренирующего
+            основания, установка бетонных колец</p></td>
+          <td colspan="2" valign="top"><p align="center">м.п.</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Установка дождеприёмных колодцев и желобов (включая подсоединение к системе дренажа).
+            (ливневая канализация)</p></td>
+          <td colspan="2" valign="top"><p align="center">м.п.</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Устройство системы паркового освещения</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Устройство комплексного освещения, декоративная подсветка растений, архитектурных форм и
+            элементов благоустройства, зданий, сооружений, парковых и садовых дорожек, площадок</p></td>
+          <td colspan="3" valign="top"><p align="center">дог.</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Архитектурных форм и сооружений</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Фонтаны (мрамор, натуральный горный камень). Беседки. Вазоны, садовая керамика, Садовая
+            скульптура. Деревянная скульптура и панно. Теннисные корты. Спортивные площадки. Детские площадки</p></td>
+          <td colspan="3" valign="top"><p align="center">дог.</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Земляные работы</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Выемка и перемещение грунта, рытье котлованов, скважин</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Песок</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Песчано-гравийная смесь, ПГС</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Песок строительный (карьерный)</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Песок намывной - Модуль крупности 2,3</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Песок намывной - Модуль крупности 2,7</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top"><p align="center"><strong>Щебень</strong></p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Щебень гранитный фр. 5-20</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Щебень гравийный фр. 5-20</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Щебень известняковый фр. 5-20</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Щебень гранитный фр. 20-40</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Щебень гравийный фр. 20-40</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Щебень известняковый фр. 20-40</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Щебень гранитный фр. 40-70</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Щебень гравийный фр. 40-70</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        <tr>
+          <td valign="top"><p>Щебень известняковый фр. 40-70</p></td>
+          <td colspan="2" valign="top"><p align="center">м3</p></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+
+<component src="components/contacts.html"></component>
+
+<div class="full-stroi mt-128">
+  <h1 class="c-while pt-56 fs40 fs50-md text-uppercase fw-bold text-center">FULL STROI</h1>
+  <div class="d-flex justify-content-center align-items-center">
+    <a href="#">
+      <i class="fab fa-telegram fs38 fs46-md p-16 c-telegram-green "></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-whatsapp fs38 fs46-md c-whatsapp-green"></i>
+    </a>
+  </div>
+  <p class="c-while text-center p-38 fs14 fs18-md ">
+    Все права защищена 2007 - 2022
+  </p>
+</div>
+
+<script src="js/com.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
