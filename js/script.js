@@ -220,6 +220,12 @@ const sliderGalleryImages = [
 ]
 const btnToTop = $('.btn-to-top');
 
+$('window').on('load', function(){
+    const siteForms = $('form.site-form');
+    const thanksModal = new bootstrap.Modal(document.getElementById('thanksModal'), {
+        keyboard: false
+    })
+})
 
 $(window).on('scroll', function (e){
     const scrollTop = $(e.target).scrollTop();
@@ -362,10 +368,7 @@ sliderGalleryImages.forEach((url, index) => {
 // }
 
 
-const siteForms = $('form.site-form');
-const thanksModal = new bootstrap.Modal(document.getElementById('thanksModal'), {
-    keyboard: false
-})
+
 
 
 
