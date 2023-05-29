@@ -34,107 +34,9 @@
     import {Fancybox} from './js/fancybox.esm.js';
   </script>
 
-  <style>
-      .preloader-block {
-          position: fixed;
-          top: 0;
-          left: 0;
-          background: #ffffffa6;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 1000;
-          width: 100%;
-          height: 100vh;
-          backdrop-filter: blur(10px);
-          transition: 0.5s;
-      }
-
-      .preloader-block.closed {
-          left: -100%;
-          opacity: 0;
-      }
-
-      #loader {
-          display: block;
-          position: relative;
-          left: 50%;
-          top: 50%;
-          width: 150px;
-          height: 150px;
-          margin: -75px 0 0 -75px;
-          border-radius: 50%;
-          border: 3px solid transparent;
-          border-top-color: #E4A30C;
-          -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-      }
-
-      #loader:before {
-          content: "";
-          position: absolute;
-          top: 5px;
-          left: 5px;
-          right: 5px;
-          bottom: 5px;
-          border-radius: 50%;
-          border: 3px solid transparent;
-          border-top-color: #E4A30C;
-          -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
-      }
-
-      #loader:after {
-          content: "";
-          position: absolute;
-          top: 15px;
-          left: 15px;
-          right: 15px;
-          bottom: 15px;
-          border-radius: 50%;
-          border: 3px solid transparent;
-          border-top-color: #E4A30C;
-          -webkit-animation: spin 1.5s linear infinite;
-          animation: spin 1.5s linear infinite;
-      }
-
-      @-webkit-keyframes spin {
-          0% {
-              -webkit-transform: rotate(0deg);
-              -ms-transform: rotate(0deg);
-              transform: rotate(0deg);
-          }
-          100% {
-              -webkit-transform: rotate(360deg);
-              -ms-transform: rotate(360deg);
-              transform: rotate(360deg);
-          }
-      }
-
-      @keyframes spin {
-          0% {
-              -webkit-transform: rotate(0deg);
-              -ms-transform: rotate(0deg);
-              transform: rotate(0deg);
-          }
-          100% {
-              -webkit-transform: rotate(360deg);
-              -ms-transform: rotate(360deg);
-              transform: rotate(360deg);
-          }
-      }
-  </style>
-
 </head>
 
 <body>
-
-<div class="preloader-block">
-  <div id="preloader">
-    <div id="loader"></div>
-  </div>
-
-</div>
 
 
 <component src="components/header.html"
@@ -274,21 +176,9 @@
 
 
   <component src="components/contacts.html"></component>
+  <component src="components/footer.html"></component>
 
-  <div class="full-stroi mt-128">
-    <h1 class="c-while pt-56 fs40 fs50-md text-uppercase fw-bold text-center">FULL STROI</h1>
-    <div class="d-flex justify-content-center align-items-center">
-      <a href="#">
-        <i class="fab fa-telegram fs38 fs46-md p-16 c-telegram-green "></i>
-      </a>
-      <a href="#">
-        <i class="fab fa-whatsapp fs38 fs46-md c-whatsapp-green"></i>
-      </a>
-    </div>
-    <p class="c-while text-center p-38 fs14 fs18-md ">
-      Все права защищена 2007 - 2022
-    </p>
-  </div>
+
 
 </div>
 

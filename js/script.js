@@ -4,9 +4,6 @@ const {active, none, fix} = {
     fix: 'fix'
 }
 
-$(window).on('load', function (){
-    $('.preloader-block').addClass('closed');
-})
 
 const mobileMenu = $('.mobile-menu-board');
 const _menu = $('.mobile-menu');
